@@ -1,0 +1,50 @@
+//a/i[@class='_3-8_ img sp_4oKNo8FK3QS sx_53f3a7']
+
+
+if (browser.find_element_by_xpath("//a[@role = 'button' and @aria-label='Shared with Your friends']")):
+	swf = browser.find_element_by_xpath("//a[@role = 'button' and @aria-label='Shared with Your friends']")
+	swf.click()
+	more = browser.find_element_by_xpath("//li[@class = '_54ni _o00 __MenuItem']")
+	more.click()
+	open = browser.find_element_by_xpath("//input[@value='291667064279714']")
+	open_parent = open.find_element_by_xpath('..')
+	only_me = open_parent.find_element_by_xpath('//a')
+	only_me.click()
+else:
+	browser.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+	time.sleep(3)
+	
+
+
+
+
+
+
+
+
+
+//a[@role = 'button' and @aria-label='Shared with Your friends']
+
+//a[@role='menuitemcheckbox']
+
+//a[@class = '_54nc _54nu _48t_' and @href='#' and @role='menuitemcheckbox']/div[@class = '_48u1']
+
+
+
+#this finds the "only me" option 
+only_me = browser.find_element_by_xpath("//li[@class='_54ni _4mwj _4h7j _k_c _k_e _2932 _6419 __MenuItem']/a[@class = '_54nc _54nu _48t_' and @href='#' and @role='menuitemcheckbox']/div[@class = '_48u1']")
+
+
+#this finds the 'more' option
+#more = browser.find_element_by_xpath("//li[@class = '_54ni _o00 __MenuItem']/a[@class='_54nc _54nu' and @href='#' and @role='menuitemcheckbox']/span[@class='_4chl']/div[@class='_392n _1rwt']")
+more = browser.find_element_by_xpath("//li[@class = '_54ni _o00 __MenuItem']/a[@class='_54nc _54nu' and @href='#' and @role='menuitemcheckbox']")
+
+
+//a[@class = '_54nc _54nu _48t_' and @href='#' and @role='menuitemcheckbox']/div[@class = '_48u1']
+
+#this finds the 'shared with friends' option
+//li[@class='_54ni _4h7j _k_c _k_e _2930 _6417 _54nd __MenuItem']/a[@class = '_54nc _54nu _48t_' and @href='#' and @role='menuitemcheckbox']/div[@class = '_48u1']
+
+
+(only_me = browser.find_element_by_xpath("//li[@class='_54ni _4mwj _4h7j _k_c _k_e _2932 _6419 __MenuItem']/a[@class = '_54nc _54nu _48t_' and @href='#' and @role='menuitemcheckbox']/div[@class = '_48u1']")):
+	only_me.click()
